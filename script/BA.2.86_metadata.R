@@ -29,8 +29,8 @@ metadata.filtered <- metadata %>% distinct(Accession.ID,.keep_all=T) %>%
   )
 metadata.filtered <- metadata.filtered %>% filter(!(Virus.name %in% BA.2.86_name_list))
 
-write_tsv(x=metadata.filtered, file='$metadata.filtered.tsv')
-write_tsv(x=metadata.BA.2.86, file='$metadata.BA.2.86.tsv')
+write_tsv(x=metadata.filtered, file='metadata.filtered.tsv')
+write_tsv(x=metadata.BA.2.86, file='metadata.BA.2.86.tsv')
 
 ##COMMENTOUT
 #cut the nextclade.tsv, maintaing only rows 1-8
