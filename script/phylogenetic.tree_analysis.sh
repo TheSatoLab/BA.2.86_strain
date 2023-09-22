@@ -22,6 +22,9 @@ gofasta-linux-amd64 sam toMultiAlign \
 --trim \
 --pad > ${name}.aligned.fasta
 
+#replaces 'N' characters with '-'
+python3 replace_N2hyphen.py ${name}.aligned.fasta > ${name}.aligned.N2hyphen.fasta
+
 #trim uncertain sites
 trimal \
 -in ${name}.aligned.fasta \
@@ -40,7 +43,7 @@ R --vanilla --no-echo --args \
 ${name}.aligned.trimmed.fasta \
 ${name}.treefile \
 ${name}.aligned.trimmed.2nd.fasta  \
-< ~/cov-phylo/omicron_tree/BA2/script/detect_outlier_OTU.R
+< detect_outlier_OTU.R
 
 #construction of the second tree
 iqtree2 \
