@@ -2,15 +2,10 @@
 
 library(stringr)
 library(readr)
-library(ggtree)
-library(treeio)
-library(ggplot2)
-library(ape)
+library(data.table)
 library(dplyr)
 library(tidyr)
-library(tidytree)
-library(openxlsx)
-library(data.table)
+library(stringr)
 library(magrittr)
 
 #Extraction of BA.2.86 and BA.2.86.1 data from GISAID metadata
