@@ -13,7 +13,7 @@ library(openxlsx)
 library(data.table)
 library(magrittr)
 
-metadata <- fread("merged.final.tsv") #this tsv file was from the BA.2.86_gisaid&nextclade_merged.R script
+metadata <- fread("merged.final.tsv") #this tsv file is from the BA.2.86_gisaid&nextclade_merged.R script
 nwk <- system.file("extdata/SARS-CoV-2", "${name}.nwk", package="treeio") #this nwk file is from phylogenetic.tree_analysis.sh script
 tree <- read.tree(nwk)
 modify.tree <- function(tree) {
