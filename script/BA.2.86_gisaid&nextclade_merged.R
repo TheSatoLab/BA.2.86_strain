@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 #read all the needed files to merge GISAID and Nextclade metadata from the previous scripts
 metadata.filtered <- fread('metadata.tsv')
 metadata.BA.2.86 <- fread('metadata.BA.2.86.tsv')
