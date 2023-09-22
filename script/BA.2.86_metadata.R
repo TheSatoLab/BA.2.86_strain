@@ -76,3 +76,4 @@ final.df <- final.df %>% distinct(seqName,.keep_all=T)
 
 write_tsv(x=final.df, file='$merged.final.tsv')
 
+#done
