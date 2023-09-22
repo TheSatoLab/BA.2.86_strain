@@ -1,5 +1,12 @@
 #!/usr/bin/env R
 
+library(stringr)
+library(readr)
+library(ape)
+library(dplyr)
+library(data.table)
+library(magrittr)
+
 #read all the needed files to merge GISAID and Nextclade metadata from the previous scripts
 metadata.filtered <- fread('metadata.tsv')
 metadata.BA.2.86 <- fread('metadata.BA.2.86.tsv')
