@@ -48,3 +48,4 @@ iqtree2 \
 -nt AUTO -mem 8G -m GTR -bb 1000
 
 #done
+#convert the tree file into a newick file for phylogenetic.tree_visualization.R script
