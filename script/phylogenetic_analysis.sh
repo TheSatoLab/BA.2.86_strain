@@ -8,7 +8,7 @@
 
 #align using minimap2
 minimap2 -a -x asm20 --sam-hit-only --secondary=no --score-N=0 -t 10 \
-NC_045512.fas \
+NC_045512.fasta \
 ${name}.fasta \
 -o ${name}.sam
 
@@ -16,7 +16,7 @@ ${name}.fasta \
 gofasta-linux-amd64 sam toMultiAlign \
 -s ${name}.sam \
 -t 10 \
---reference NC_045512.fas \
+--reference NC_045512.fasta \
 --trimstart 265 \
 --trimend 29674 \
 --trim \
