@@ -36,6 +36,6 @@ combo.df.1.filtered <- combo.df.1 %>% distinct(Accession.ID,.keep_all=T) %>%
 final.df <- rbind(combo.df.sampled, combo.df.1.filtered)
 final.df <- final.df %>% distinct(seqName,.keep_all=T)
 
-write_tsv(x=final.df, file='$merged.final.tsv')
+write_tsv(x=final.df, file='merged.final.tsv')
 
 #done
