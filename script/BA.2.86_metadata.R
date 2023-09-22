@@ -34,7 +34,7 @@ write_tsv(x=metadata.BA.2.86, file='metadata.BA.2.86.tsv')
 
 ##COMMENTOUT
 #cut the nextclade.tsv, maintaing only rows 1-8
-#See BA.2.86_nextclade_metadata_prep.txt
+#See BA.2.86_nextclade_metadata_prep.sh
 
 #read all the needed files to merge GISAID and Nextclade metadata
 metadata.filtered <- fread('metadata.tsv')
