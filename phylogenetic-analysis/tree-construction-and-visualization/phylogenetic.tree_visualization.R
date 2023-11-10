@@ -27,7 +27,7 @@ plot(tree)
 tip.labels <- as.data.frame(tree$tip.label) %>% set_colnames("tip.labels")
 updated.metadata <- metadata %>% inner_join(tip.labels, join_by(Accession.ID == tip.labels))
 updated.metadata <- updated.metadata %>% distinct(Accession.ID,.keep_all=T)
-updated.metadata$clade_nextstrain <- ifelse(grepl("BA\\.2\\.86", updated.metadata$Pango.lineage) | grepl("BA\\.2\\.86\\.1", updated.metadata$Pango.lineage), "21.L.1", updated.metadata$clade_nextstrain)
+updated.metadata$clade_nextstrain <- ifelse(grepl("BA\\.2\\.86", updated.metadata$Pango.lineage) | grepl("BA\\.2\\.86\\.1", updated.metadata$Pango.lineage), "BA.2.86", updated.metadata$clade_nextstrain)
 
 updated.metadata <- updated.metadata %>% 
   mutate(group = case_when(
@@ -46,7 +46,7 @@ updated.metadata <- updated.metadata %>%
     clade_nextstrain %in% c('23A') ~ 'XBB.1.5',
     clade_nextstrain %in% c('23B') ~ 'XBB.1.16',
     clade_nextstrain %in% c('23D', '23F') ~ 'EG.5.1',
-    clade_nextstrain %in% c('21.L.1') ~ 'BA.2.86',
+    clade_nextstrain %in% c('BA.2.86') ~ 'BA.2.86',
     TRUE ~ NA_character_ 
   ))
 
